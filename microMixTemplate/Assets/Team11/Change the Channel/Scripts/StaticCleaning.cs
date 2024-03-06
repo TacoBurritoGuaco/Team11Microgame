@@ -58,8 +58,6 @@ namespace team11
                 //Find the in-game antenna current angle & make sure the random clear angle is different from it
                 if (currentAntennaAngle < (randomClearAngle + 1.5f) && currentAntennaAngle > (randomClearAngle - 1.5f))
                 {
-                    randomStatic();
-
                     //Increase clear time when a button is pressed successfully 
                     clearTimes+=1;
 
@@ -69,7 +67,9 @@ namespace team11
                         cameraAnim.SetTrigger("Win");
                         hasPlayerWon = true;
                         ReportGameCompletedEarly();
+                        return; //prevents static from randomizing for one frame
                     }
+                    randomStatic();
                 }
             }
          
