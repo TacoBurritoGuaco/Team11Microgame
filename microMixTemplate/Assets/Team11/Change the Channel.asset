@@ -16,7 +16,7 @@ MonoBehaviour:
   teamNumber: 0
   gameTitle: Change the Channel
   gameIcon: {fileID: 0}
-  prompt: Spin
+  prompt: Tune It!
   singlePlayerScene: {fileID: 102900000, guid: 854f02c567ad2b849870342e0c77a291, type: 3}
   twoPlayerScene: {fileID: 102900000, guid: 9b2da2df7195baa41ba3470e1b2aad58, type: 3}
   controls:
