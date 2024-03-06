@@ -16,7 +16,7 @@ namespace team11
         public float randomClearAngle;
 
         private float currentStaticDistance;
-        public bool hasPlayerWon; //if the player has won or not
+        public bool gameOver; //if the player has won or not
 
         public Animator cameraAnim; //The camera's animator
         public SpriteRenderer Static;
@@ -40,11 +40,7 @@ namespace team11
 
         void Update ()
         {
-            if (hasPlayerWon)
-            {
-                Static.color = new Color(1, 1, 1, 0); //Remove the static
-                return; //Stop anything else from happening if the player has won
-            }
+            if (gameOver) return; //Stop anything else from happening if the game is over
 
             //Find the antenna current angle
             currentAntennaAngle = GameObject.Find("Antenna").GetComponent<Antenna>().angle;
@@ -64,8 +60,10 @@ namespace team11
                     //When clear time equals to win press time, the player wins the game
                     if (clearTimes == winPressTimes)
                     {
-                        cameraAnim.SetTrigger("Win");
-                        hasPlayerWon = true;
+                        cameraAnim.SetTrigger("Win"); //play the win animation
+                        Static.color = new Color(1, 1, 1, 0); //Remove the static
+
+                        gameOver = true;
                         ReportGameCompletedEarly();
                         return; //prevents static from randomizing for one frame
                     }
@@ -88,6 +86,14 @@ namespace team11
             while (randomClearAngle < (currentAntennaAngle + 30) && randomClearAngle > (currentAntennaAngle - 30)) {
                 randomClearAngle = Random.Range(minRotationAngle, maxRotationAngle); //randomize the angle
             }
+        }
+
+        // Code to execute when time runs out in the game
+        protected override void OnTimesUp()
+        {
+            cameraAnim.SetTrigger("Lose"); //plays the lose animation
+            Static.color = new Color(1, 1, 1, 1); //Set static to maximum
+            gameOver = true; //sets gameOver to true
         }
     }
 }
