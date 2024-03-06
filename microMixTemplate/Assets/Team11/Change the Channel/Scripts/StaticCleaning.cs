@@ -17,6 +17,7 @@ namespace team11
 
         private float currentStaticDistance;
 
+        public Animator cameraAnim; //The camera's animator
         public SpriteRenderer Static;
         public AnimationCurve fading; //The animation curve of fading static
         float interpolation; //the interpolation value of the static lerp
@@ -39,12 +40,14 @@ namespace team11
             //Find the antenna current angle
             currentAntennaAngle = GameObject.Find("Antenna").GetComponent<Antenna>().angle;
 
-            //Find the in-game antenna current angle & make sure the random clear angle is different from it
-            if (currentAntennaAngle < (randomClearAngle + 1.5f) && currentAntennaAngle > (randomClearAngle - 1.5f))
+            
+            //Only press the button when at the correct angle
+            if (button1.WasPressedThisFrame()) //IMPORTANT DISTINCTION
+            //WasPressedThisFrame() does this only ONCE per frame, unlike IS pressed
             {
-                //Only press the button when at the correct angle
-                if (button1.WasPressedThisFrame()) //IMPORTANT DISTINCTION
-                    //WasPressedThisFrame() does this only ONCE per frame, unlike IS pressed
+                cameraAnim.SetTrigger("SuccesfulHit");
+                //Find the in-game antenna current angle & make sure the random clear angle is different from it
+                if (currentAntennaAngle < (randomClearAngle + 1.5f) && currentAntennaAngle > (randomClearAngle - 1.5f))
                 {
                     randomStatic();
 
@@ -54,6 +57,7 @@ namespace team11
                     //When clear time equals to win press time, the player wins the game
                     if (clearTimes == winPressTimes)
                     {
+                        cameraAnim.SetTrigger("Win");
                         ReportGameCompletedEarly();
                     }
                 }
