@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 
 namespace team11
@@ -14,14 +15,15 @@ namespace team11
         public float currentAntennaAngle;
         public float randomClearAngle;
 
-        private float maxStaticDistance;
         private float currentStaticDistance;
 
         public SpriteRenderer Static;
+        public AnimationCurve fading; //The animation curve of fading static
+        float interpolation; //the interpolation value of the static lerp
 
         private float staticOpacity = 1f;
-        private float currentStaticOpacity;
-        public float minStaticOpacity = 0.5f;
+        public float currentStaticOpacity;
+        public float minStaticOpacity = 0.1f;
 
         public float winPressTimes = 3;
         private float clearTimes = 0;
@@ -30,12 +32,6 @@ namespace team11
         {
             //Generate a random clear angle
             randomStatic();
-
-            //Calculate the maximum static distance 
-            float distanceToMinRotation = Mathf.Abs(randomClearAngle-minRotationAngle);
-            float distanceToMaxRotation = Mathf.Abs(randomClearAngle - maxRotationAngle);
-            maxStaticDistance = Mathf.Max(distanceToMinRotation, distanceToMaxRotation);
-
         }
 
         void Update ()
@@ -63,12 +59,12 @@ namespace team11
                 }
             }
          
-
             //Calcualting current static opacity
-            currentStaticDistance = Mathf.Abs(currentAntennaAngle - randomClearAngle);
-            currentStaticOpacity = currentStaticDistance / maxStaticDistance + minStaticOpacity;
+            currentStaticDistance = Mathf.Abs(currentAntennaAngle - randomClearAngle); //Get the distance between the antenna and the random clear angle
+            currentStaticOpacity = currentStaticDistance / 75f; //Divide by the range in which you want the static to begin fading
 
-            Static.color = new Color(255, 255, 255, currentStaticOpacity);
+            interpolation = fading.Evaluate(currentStaticOpacity); //Set the interpolation value of the slope
+            Static.color = new Color(1, 1, 1, Mathf.Lerp(0, 1, interpolation)); //Interpolate (I did it yay)
 
         }
 
@@ -76,8 +72,5 @@ namespace team11
         {
             randomClearAngle = Random.Range(minRotationAngle, maxRotationAngle);
         }
-
-
-
     }
 }
