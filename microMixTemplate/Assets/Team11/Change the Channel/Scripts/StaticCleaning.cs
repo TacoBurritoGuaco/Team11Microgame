@@ -16,6 +16,7 @@ namespace team11
         public float randomClearAngle;
 
         private float currentStaticDistance;
+        public bool hasPlayerWon; //if the player has won or not
 
         public Animator cameraAnim; //The camera's animator
         public SpriteRenderer Static;
@@ -37,6 +38,12 @@ namespace team11
 
         void Update ()
         {
+            if (hasPlayerWon)
+            {
+                Static.color = new Color(1, 1, 1, 0); //Remove the static
+                return; //Stop anything else from happening if the player has won
+            }
+
             //Find the antenna current angle
             currentAntennaAngle = GameObject.Find("Antenna").GetComponent<Antenna>().angle;
 
@@ -58,6 +65,7 @@ namespace team11
                     if (clearTimes == winPressTimes)
                     {
                         cameraAnim.SetTrigger("Win");
+                        hasPlayerWon = true;
                         ReportGameCompletedEarly();
                     }
                 }
