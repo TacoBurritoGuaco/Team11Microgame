@@ -13,6 +13,7 @@ namespace team11
         private float maxRotationAngle = 75f;
         public float currentAntennaAngle;
         public float randomClearAngle;
+
         private float maxStaticDistance;
         private float currentStaticDistance;
 
@@ -43,10 +44,11 @@ namespace team11
             currentAntennaAngle = GameObject.Find("Antenna").GetComponent<Antenna>().angle;
 
             //Find the in-game antenna current angle & make sure the random clear angle is different from it
-            if (currentAntennaAngle <= (randomClearAngle + 1) || currentAntennaAngle >= (randomClearAngle - 1))
+            if (currentAntennaAngle < (randomClearAngle + 1.5f) && currentAntennaAngle > (randomClearAngle - 1.5f))
             {
                 //Only press the button when at the correct angle
-                if (button1.IsPressed())
+                if (button1.WasPressedThisFrame()) //IMPORTANT DISTINCTION
+                    //WasPressedThisFrame() does this only ONCE per frame, unlike IS pressed
                 {
                     randomStatic();
 
