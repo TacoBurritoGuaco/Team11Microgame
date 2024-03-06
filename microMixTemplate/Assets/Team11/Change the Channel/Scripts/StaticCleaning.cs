@@ -32,7 +32,9 @@ namespace team11
 
         void Start ()
         {
-            //Generate a random clear angle
+            currentAntennaAngle = GameObject.Find("Antenna").GetComponent<Antenna>().angle; //find the antenna's angle at the beginning of the game
+            //Generate a random clear angle not within a specified range of the antenna
+            //This is why we get the antenna at the beginning of the game as well
             randomStatic();
         }
 
@@ -82,7 +84,10 @@ namespace team11
 
         public void randomStatic() //Create a random clear angle everytime when function is called
         {
-            randomClearAngle = Random.Range(minRotationAngle, maxRotationAngle);
+            //While a number is within a range we do not want the number to be in
+            while (randomClearAngle < (currentAntennaAngle + 30) && randomClearAngle > (currentAntennaAngle - 30)) {
+                randomClearAngle = Random.Range(minRotationAngle, maxRotationAngle); //randomize the angle
+            }
         }
     }
 }
