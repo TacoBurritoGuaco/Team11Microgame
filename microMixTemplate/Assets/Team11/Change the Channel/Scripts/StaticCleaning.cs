@@ -30,12 +30,23 @@ namespace team11
         public float winPressTimes = 3;
         private float clearTimes = 0;
 
-        void Start ()
+        void Start()
         {
-            currentAntennaAngle = GameObject.Find("Antenna").GetComponent<Antenna>().angle; //find the antenna's angle at the beginning of the game
+            //currentAntennaAngle = GameObject.Find("Antenna").GetComponent<Antenna>().angle; //find the antenna's angle at the beginning of the game
             //Generate a random clear angle not within a specified range of the antenna
             //This is why we get the antenna at the beginning of the game as well
-            randomStatic();
+            //randomStatic();
+            GameObject retroTV = GameObject.Find("Retro TV");
+            if (retroTV != null)
+            {
+                Transform antennaTransform = retroTV.transform.Find("Antenna");
+                if (antennaTransform != null)
+                {
+                    currentAntennaAngle = antennaTransform.GetComponent<Antenna>().angle;
+                    randomStatic();
+                }
+
+            }
         }
 
         void Update ()
@@ -43,9 +54,20 @@ namespace team11
             if (gameOver) return; //Stop anything else from happening if the game is over
 
             //Find the antenna current angle
-            currentAntennaAngle = GameObject.Find("Antenna").GetComponent<Antenna>().angle;
+            //currentAntennaAngle = GameObject.Find("Antenna").GetComponent<Antenna>().angle;
 
-            
+            GameObject retroTV = GameObject.Find("Retro TV");
+            if (retroTV != null)
+            {
+                Transform antennaTransform = retroTV.transform.Find("Antenna");
+                if (antennaTransform != null)
+                {
+                    currentAntennaAngle = antennaTransform.GetComponent<Antenna>().angle;
+                    randomStatic();
+                }
+
+            }
+
             //Only press the button when at the correct angle
             if (button1.WasPressedThisFrame()) //IMPORTANT DISTINCTION
             //WasPressedThisFrame() does this only ONCE per frame, unlike IS pressed
