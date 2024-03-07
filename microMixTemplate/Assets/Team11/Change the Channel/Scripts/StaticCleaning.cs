@@ -21,7 +21,7 @@ namespace team11
         public Animator cameraAnim; //The camera's animator
         public Animator TVAnim; //The TV's animator
 
-        public SpriteRenderer Static;
+        public Material Static;
         public AnimationCurve fading; //The animation curve of fading static
         float interpolation; //the interpolation value of the static lerp
 
