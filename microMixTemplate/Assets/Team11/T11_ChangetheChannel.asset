@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d24fbde2c24ab1544bd81b52842e8ec5, type: 3}
-  m_Name: Change the Channel
+  m_Name: T11_ChangetheChannel
   m_EditorClassIdentifier: 
   includeInRandomizer: 1
   teamNumber: 11
   gameTitle: Change the Channel
   gameIcon: {fileID: 21300000, guid: 5fbffcc47869df345b8d35c1524163be, type: 3}
-  announcerText: Tune It!
+  announcerText: Tune It
   announcerAudioFile: Tune It-RX10MDc_341-01
   _announcerAudio: {fileID: 8300000, guid: ac783a7dbc5c7b84ca39a20b961953ca, type: 3}
   singlePlayerScene: {fileID: 102900000, guid: 854f02c567ad2b849870342e0c77a291, type: 3}
@@ -33,5 +33,7 @@ MonoBehaviour:
   postgameMessages:
   - No TV show for you.
   bannerImage: {fileID: 0}
-  developerCredits: []
+  developerCredits:
+  - Fernando Salas Duran - Lead Programmer
+  - Rye Lue Sue - 2D Asset Artist
   licensedWorksCredits: []
