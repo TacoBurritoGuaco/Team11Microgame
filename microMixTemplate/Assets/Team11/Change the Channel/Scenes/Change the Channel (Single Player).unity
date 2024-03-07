@@ -1378,11 +1378,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf85315cf99bbaa4b84dba8c25c01cdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  getInputFrom: 0
-  channel:
-  - {fileID: 2100000, guid: 371b1a41bfb4d434a9f700f463d85701, type: 2}
-  - {fileID: 2100000, guid: 073f17a396202494e91266f644f1b333, type: 2}
+  currentChannel: 0
   lastClearTime: 0
+  TV: {fileID: 1662259061}
+  channels:
+  - {fileID: 2100000, guid: 073f17a396202494e91266f644f1b333, type: 2}
+  - {fileID: 2100000, guid: 5456d7850414ba141bd05e301ecbcc5e, type: 2}
+  - {fileID: 2100000, guid: 371b1a41bfb4d434a9f700f463d85701, type: 2}
 --- !u!1001 &2037991048
 PrefabInstance:
   m_ObjectHideFlags: 0
