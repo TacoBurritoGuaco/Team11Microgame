@@ -19,11 +19,12 @@ namespace team11
         public bool gameOver; //if the player has won or not
 
         public Animator cameraAnim; //The camera's animator
+        public Animator TVAnim; //The TV's animator
+
         public SpriteRenderer Static;
         public AnimationCurve fading; //The animation curve of fading static
         float interpolation; //the interpolation value of the static lerp
 
-        private float staticOpacity = 1f;
         public float currentStaticOpacity;
         public float minStaticOpacity = 0.1f;
 
@@ -50,7 +51,10 @@ namespace team11
             if (button1.WasPressedThisFrame()) //IMPORTANT DISTINCTION
             //WasPressedThisFrame() does this only ONCE per frame, unlike IS pressed
             {
-                cameraAnim.SetTrigger("SuccesfulHit");
+                //Animates the camera and the TV
+                cameraAnim.SetTrigger("SuccesfulHit"); 
+                TVAnim.SetTrigger("SuccesfulHit");
+
                 //Find the in-game antenna current angle & make sure the random clear angle is different from it
                 if (currentAntennaAngle < (randomClearAngle + 1.5f) && currentAntennaAngle > (randomClearAngle - 1.5f))
                 {
