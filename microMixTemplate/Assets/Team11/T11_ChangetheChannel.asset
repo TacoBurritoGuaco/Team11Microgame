@@ -22,8 +22,12 @@ MonoBehaviour:
   singlePlayerScene: {fileID: 102900000, guid: 854f02c567ad2b849870342e0c77a291, type: 3}
   twoPlayerScene: {fileID: 0}
   controls:
-  - label: Player 1
+  - label: Clean Static
     primary: 100
+    joiner: 0
+    secondary: 0
+  - label: Slap TV
+    primary: 0
     joiner: 0
     secondary: 25
   rightPlayerAltControls: []
