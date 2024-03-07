@@ -947,7 +947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2987779774955725748, guid: d8aa12e1227800d4eb9779aa6e72c24e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d8aa12e1227800d4eb9779aa6e72c24e, type: 3}
       propertyPath: m_Name
@@ -971,6 +971,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -518470674339455465, guid: d8aa12e1227800d4eb9779aa6e72c24e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 994278637}
+    - targetCorrespondingSourceObject: {fileID: 8647547315813808087, guid: d8aa12e1227800d4eb9779aa6e72c24e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1904997582}
     - targetCorrespondingSourceObject: {fileID: -2987779774955725748, guid: d8aa12e1227800d4eb9779aa6e72c24e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1252673086}
@@ -1126,6 +1129,7 @@ MonoBehaviour:
   currentStaticOpacity: 0
   minStaticOpacity: 0.5
   winPressTimes: 3
+  clearTimes: 0
 --- !u!1001 &1371228084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1357,6 +1361,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1904997578 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8647547315813808087, guid: d8aa12e1227800d4eb9779aa6e72c24e, type: 3}
+  m_PrefabInstance: {fileID: 994278635}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1904997582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904997578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf85315cf99bbaa4b84dba8c25c01cdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  getInputFrom: 0
+  channel:
+  - {fileID: 2100000, guid: 371b1a41bfb4d434a9f700f463d85701, type: 2}
+  - {fileID: 2100000, guid: 073f17a396202494e91266f644f1b333, type: 2}
+  lastClearTime: 0
 --- !u!1001 &2037991048
 PrefabInstance:
   m_ObjectHideFlags: 0

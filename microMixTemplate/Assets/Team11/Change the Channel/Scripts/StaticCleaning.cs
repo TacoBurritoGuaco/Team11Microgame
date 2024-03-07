@@ -29,7 +29,7 @@ namespace team11
         public float minStaticOpacity = 0.1f;
 
         public float winPressTimes = 3;
-        private float clearTimes = 0;
+        public float clearTimes = 0;
 
         void Start ()
         {
