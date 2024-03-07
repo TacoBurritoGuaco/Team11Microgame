@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Change the Channel
   m_EditorClassIdentifier: 
   includeInRandomizer: 1
-  teamNumber: 0
+  teamNumber: 11
   gameTitle: Change the Channel
   gameIcon: {fileID: 0}
-  prompt: Tune It!
+  announcerText: Tune It!
+  announcerAudioFile: Tune It-RX10MDc_347-01
+  _announcerAudio: {fileID: 8300000, guid: 2c873d790b8dcd44688b249e65e85937, type: 3}
   singlePlayerScene: {fileID: 102900000, guid: 854f02c567ad2b849870342e0c77a291, type: 3}
   twoPlayerScene: {fileID: 0}
   controls:
