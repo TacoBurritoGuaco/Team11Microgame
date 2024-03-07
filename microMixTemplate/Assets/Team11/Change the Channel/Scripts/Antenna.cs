@@ -13,6 +13,8 @@ namespace team11
         //Start is called before the first frame update
 
         Rigidbody rb; //the antenna's rigidbody
+        public Animator rArrow; //the right arrow animator
+        public Animator lArrow; //the left arrow animator
 
         public float angle; //The current angle of the antenna
         public float speed; //The speed at which this angle will change
@@ -62,6 +64,12 @@ namespace team11
             //(It cannot be greater than this, or less than this)
             transform.rotation = Quaternion.Euler(0, 0, angle);
             //Change the rotation of the object to the angle value
+        }
+        // Code to execute when the microgame starts
+        protected override void OnGameStart()
+        {
+            rArrow.SetTrigger("GameStart"); //starts the right arrow fade in
+            lArrow.SetTrigger("GameStart"); //starts the left arrow fade in
         }
     }
 }
