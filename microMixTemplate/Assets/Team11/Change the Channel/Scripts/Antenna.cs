@@ -58,7 +58,7 @@ namespace team11
             {
                 angle -= speed; //increases angle by 0.5f
             }
-            angle = Mathf.Clamp(angle, -75, 75); //clamps the angle to maximum and minimum values
+            angle = Mathf.Clamp(angle, -50, 50); //clamps the angle to maximum and minimum values
             //(It cannot be greater than this, or less than this)
             transform.rotation = Quaternion.Euler(0, 0, angle);
             //Change the rotation of the object to the angle value

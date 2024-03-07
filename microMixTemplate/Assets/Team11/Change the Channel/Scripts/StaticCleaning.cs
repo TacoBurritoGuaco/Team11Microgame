@@ -10,8 +10,8 @@ namespace team11
     {
 
         //Variables required for the static cleaning
-        private float minRotationAngle = -75f;
-        private float maxRotationAngle = 75f;
+        private float minRotationAngle = -50f;
+        private float maxRotationAngle = 50f;
         public float currentAntennaAngle;
         public float randomClearAngle;
 
@@ -83,7 +83,7 @@ namespace team11
         public void randomStatic() //Create a random clear angle everytime when function is called
         {
             //While a number is within a range we do not want the number to be in
-            while (randomClearAngle < (currentAntennaAngle + 30) && randomClearAngle > (currentAntennaAngle - 30)) {
+            while (randomClearAngle < (currentAntennaAngle + 20) && randomClearAngle > (currentAntennaAngle - 20)) {
                 randomClearAngle = Random.Range(minRotationAngle, maxRotationAngle); //randomize the angle
             }
         }
