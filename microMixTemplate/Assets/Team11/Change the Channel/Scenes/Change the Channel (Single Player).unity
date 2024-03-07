@@ -305,6 +305,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Godzilla
       objectReference: {fileID: 0}
+    - target: {fileID: 8039116134878788181, guid: c7f232e5e6030944a87b3a659cae6876, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e8387682df2e744a8535d0f8cb46119, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -540,6 +544,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -3737483198125293150, guid: 44afe7a8fc0b91f4586ec190637a85f8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2740c9ad77562eb4fb957f6fa61a8645, type: 2}
+    - target: {fileID: -2597411323775548606, guid: 44afe7a8fc0b91f4586ec190637a85f8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1a8b211da54e2e94ca43b17bd497dfe7, type: 2}
+    - target: {fileID: -1660384031183063813, guid: 44afe7a8fc0b91f4586ec190637a85f8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1db5440842b6201499cf8d149fb71ddf, type: 2}
     - target: {fileID: 919132149155446097, guid: 44afe7a8fc0b91f4586ec190637a85f8, type: 3}
       propertyPath: m_Name
       value: Living Room_2
@@ -548,6 +564,18 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.6253
       objectReference: {fileID: 0}
+    - target: {fileID: 6968995813595412834, guid: 44afe7a8fc0b91f4586ec190637a85f8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1a8b211da54e2e94ca43b17bd497dfe7, type: 2}
+    - target: {fileID: 7682021403143014644, guid: 44afe7a8fc0b91f4586ec190637a85f8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2740c9ad77562eb4fb957f6fa61a8645, type: 2}
+    - target: {fileID: 8971019265193058323, guid: 44afe7a8fc0b91f4586ec190637a85f8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 979999fb57ff0e14192bd697e75df35d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -933,6 +961,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 48b45256cbb258248acbcc935a7f4317, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 76b1c4d905feac846a932b80ca4982fc, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 48b45256cbb258248acbcc935a7f4317, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 23c5c7faa49bd5f488d00ca80823825d, type: 2}
     - target: {fileID: 919132149155446097, guid: 48b45256cbb258248acbcc935a7f4317, type: 3}
       propertyPath: m_Name
       value: Chinese Jade
@@ -1071,10 +1107,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6875284275866480748, guid: 853e0119146306f49915237fca935300, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 762a30fd65ba650459a25ee68e64bb66, type: 2}
     - target: {fileID: 919132149155446097, guid: 853e0119146306f49915237fca935300, type: 3}
       propertyPath: m_Name
       value: Microphone
       objectReference: {fileID: 0}
+    - target: {fileID: 6739794866890665349, guid: 853e0119146306f49915237fca935300, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7aafe21a1d0a8e04ca669e84f1bc4ca4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
