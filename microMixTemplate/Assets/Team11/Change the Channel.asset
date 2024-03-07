@@ -15,7 +15,7 @@ MonoBehaviour:
   includeInRandomizer: 1
   teamNumber: 0
   gameTitle: Change the Channel
-  gameIcon: {fileID: 21300000, guid: 5fbffcc47869df345b8d35c1524163be, type: 3}
+  gameIcon: {fileID: 0}
   prompt: Tune It!
   singlePlayerScene: {fileID: 102900000, guid: 854f02c567ad2b849870342e0c77a291, type: 3}
   twoPlayerScene: {fileID: 0}
