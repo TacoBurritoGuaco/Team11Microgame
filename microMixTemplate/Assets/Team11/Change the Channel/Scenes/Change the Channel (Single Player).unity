@@ -1074,6 +1074,7 @@ MonoBehaviour:
   gameOver: 0
   cameraAnim: {fileID: 961739755}
   TVAnim: {fileID: 1662259061}
+  staticSound: {fileID: 1733840925}
   Static: {fileID: 2100000, guid: 3b4df60bc5b159948848990c46fe0f45, type: 2}
   fading:
     serializedVersion: 2

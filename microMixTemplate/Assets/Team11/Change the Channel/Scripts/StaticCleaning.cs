@@ -83,7 +83,7 @@ namespace team11
 
             interpolation = fading.Evaluate(currentStaticOpacity); //Set the interpolation value of the slope
             Static.color = new Color(1, 1, 1, Mathf.Lerp(0, 1, interpolation)); //Interpolate (I did it yay)
-            staticSound.volume = Mathf.Lerp(0, 1, interpolation);
+            staticSound.volume = Mathf.Lerp(0, 0.6f, interpolation);
 
         }
 
