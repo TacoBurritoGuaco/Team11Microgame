@@ -49,7 +49,7 @@ namespace team11
             speed = Mathf.Clamp(speed, 0, 2); //clamps the speed value
 
             //If statement that updates the current state of the punchUI Animation
-            if (angle < (GameObject.Find("StaticScreen").GetComponent<StaticCleaning>().randomClearAngle + 2.5f) && angle > (GameObject.Find("StaticScreen").GetComponent<StaticCleaning>().randomClearAngle - 2.5f))
+            if (angle < (GameObject.Find("StaticScreen").GetComponent<StaticCleaning>().randomClearAngle + 5f) && angle > (GameObject.Find("StaticScreen").GetComponent<StaticCleaning>().randomClearAngle - 5f))
             {
                 punchUI.SetBool("InRange", true); //set "inRange" to true
             } else

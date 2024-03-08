@@ -66,7 +66,7 @@ namespace team11
          
             //Calcualting current static opacity
             currentStaticDistance = Mathf.Abs(currentAntennaAngle - randomClearAngle); //Get the distance between the antenna and the random clear angle
-            currentStaticOpacity = currentStaticDistance / 90f; //Divide by the range in which you want the static to begin fading
+            currentStaticOpacity = currentStaticDistance / 75f; //Divide by the range in which you want the static to begin fading
 
             interpolation = fading.Evaluate(currentStaticOpacity); //Set the interpolation value of the slope
             Static.color = new Color(1, 1, 1, Mathf.Lerp(0, 1, interpolation)); //Interpolate (I did it yay)
@@ -104,7 +104,7 @@ namespace team11
             
 
             //Find the in-game antenna current angle & make sure the random clear angle is different from it
-            if (currentAntennaAngle < (randomClearAngle + 2.5f) && currentAntennaAngle > (randomClearAngle - 2.5f))
+            if (currentAntennaAngle < (randomClearAngle + 5f) && currentAntennaAngle > (randomClearAngle - 5f))
             {
 
                 currentChannel.Stop();
