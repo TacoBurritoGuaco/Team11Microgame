@@ -40,8 +40,25 @@ MonoBehaviour:
   bannerImage: {fileID: 21300000, guid: c6e5db07c42617e4eac0361d22079bd9, type: 3}
   developerCredits:
   - Fernando Salas Duran - Lead Programmer
+  - Emily Barraclough - 2D & 3D Asset Artist
   - Rye Lue Sue - 2D Asset Artist
-  - Yuhua Xiao - 2D&3D Asset Artist, Game Designer, Programmer
+  - Ben Liu - 3D Asset Artist
+  - Yuhua Xiao - 2D & 3D Asset Artist, Programmer
   - Jack Caunter - Audio Designer
   - Claudia Rando - Audio Designer
-  licensedWorksCredits: []
+  licensedWorksCredits:
+  - titleOfWork: Talk Show BGM
+    creator: joaoespancabacelar
+    source: FreeSound
+    url: https://freesound.org/people/joaoespancabacelar/sounds/713286/
+    licence: CC BY-NC 4.0
+  - titleOfWork: White Noise Texture
+    creator: Vitaly
+    source: Adobe Stock
+    url: https://stock.adobe.com/ca/images/white-noise-texture-static-interference-grunge-vector-background-tv-screen-no-signal/278622520?prev_url=detail
+    licence: Adobe's License for Academic Work
+  - titleOfWork: Red Arrow Right Vector
+    creator: Accountanz
+    source: Adobe Stock
+    url: https://stock.adobe.com/ca/images/red-arrow-right-vector-direction-isolated-on-a-white-background-simple-red-arrow/573874438?prev_url=detail&asset_id=573874438
+    licence: Adobe's License for Academic Work
