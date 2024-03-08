@@ -31,7 +31,7 @@ namespace team11
         public void changeChannel()
         {
             //Changes the channel texture animation
-            currentChannel = (int)Random.Range(0, 3);
+            currentChannel = (int)Random.Range(0, 4);
             TV.SetInteger("change", currentChannel);
 
             //Changes the channel texture

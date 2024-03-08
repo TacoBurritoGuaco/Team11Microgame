@@ -947,7 +947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2987779774955725748, guid: d8aa12e1227800d4eb9779aa6e72c24e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d8aa12e1227800d4eb9779aa6e72c24e, type: 3}
       propertyPath: m_Name
@@ -1386,6 +1386,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 073f17a396202494e91266f644f1b333, type: 2}
   - {fileID: 2100000, guid: 5456d7850414ba141bd05e301ecbcc5e, type: 2}
   - {fileID: 2100000, guid: 371b1a41bfb4d434a9f700f463d85701, type: 2}
+  - {fileID: 2100000, guid: a6003725e91f272428234866f11f921c, type: 2}
 --- !u!1001 &2037991048
 PrefabInstance:
   m_ObjectHideFlags: 0
