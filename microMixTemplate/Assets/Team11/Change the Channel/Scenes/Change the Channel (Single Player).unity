@@ -164,16 +164,16 @@ AudioSource:
   m_GameObject: {fileID: 77040312}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 2585260510078390270, guid: 98f5bfffaef9d8849a822284a81797dd, type: 2}
   m_audioClip: {fileID: 8300000, guid: e08a0847e114f4541a3571954fba3bd4, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_PlayOnAwake: 0
+  m_Volume: 0.4
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 180
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -788,16 +788,16 @@ AudioSource:
   m_GameObject: {fileID: 817064954}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -1042635619217338002, guid: 98f5bfffaef9d8849a822284a81797dd, type: 2}
   m_audioClip: {fileID: 8300000, guid: f0739b8ff1da5674c846050743da8fb9, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_PlayOnAwake: 0
+  m_Volume: 0.399
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 180
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1582,6 +1582,7 @@ MonoBehaviour:
   cameraAnim: {fileID: 961739755}
   TVAnim: {fileID: 1662259061}
   staticSound: {fileID: 1733840925}
+  currentChannel: {fileID: 0}
   Static: {fileID: 2100000, guid: 3b4df60bc5b159948848990c46fe0f45, type: 2}
   fading:
     serializedVersion: 2
@@ -1777,16 +1778,16 @@ AudioSource:
   m_GameObject: {fileID: 1475779352}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -4872679617548914774, guid: 98f5bfffaef9d8849a822284a81797dd, type: 2}
   m_audioClip: {fileID: 8300000, guid: e23ca7c7964b3f644a82df4390c42cea, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_PlayOnAwake: 0
+  m_Volume: 0.399
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 180
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1933,7 +1934,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 53f7c681d5df9df4b96b5e0c7e108672, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2172,6 +2173,11 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 5456d7850414ba141bd05e301ecbcc5e, type: 2}
   - {fileID: 2100000, guid: 371b1a41bfb4d434a9f700f463d85701, type: 2}
   - {fileID: 2100000, guid: a6003725e91f272428234866f11f921c, type: 2}
+  channelMusic:
+  - {fileID: 77040314}
+  - {fileID: 1475779354}
+  - {fileID: 1986350761}
+  - {fileID: 817064956}
 --- !u!1 &1986350759
 GameObject:
   m_ObjectHideFlags: 0
@@ -2213,16 +2219,16 @@ AudioSource:
   m_GameObject: {fileID: 1986350759}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -9094272331455018780, guid: 98f5bfffaef9d8849a822284a81797dd, type: 2}
   m_audioClip: {fileID: 8300000, guid: f76e9a4c40c84bd4bb70392c6c500cee, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_PlayOnAwake: 0
+  m_Volume: 0.3
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 180
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
