@@ -47,6 +47,15 @@ namespace team11
                 speed = 0; //resets speed to minimum
             }
             speed = Mathf.Clamp(speed, 0, 2); //clamps the speed value
+
+            //If statement that updates the current state of the punchUI Animation
+            if (angle < (GameObject.Find("StaticScreen").GetComponent<StaticCleaning>().randomClearAngle + 2.5f) && angle > (GameObject.Find("StaticScreen").GetComponent<StaticCleaning>().randomClearAngle - 2.5f))
+            {
+                punchUI.SetBool("InRange", true); //set "inRange" to true
+            } else
+            {
+                punchUI.SetBool("InRange", false); //sets PunchUI to false by default
+            }
         }
 
         private void FixedUpdate()
@@ -71,7 +80,6 @@ namespace team11
         {
             rArrow.SetTrigger("GameStart"); //starts the right arrow fade in
             lArrow.SetTrigger("GameStart"); //starts the left arrow fade in
-            punchUI.SetTrigger("GameStart"); //starts the UI punch animation
         }
     }
 }

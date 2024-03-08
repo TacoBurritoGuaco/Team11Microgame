@@ -1582,6 +1582,7 @@ MonoBehaviour:
   gameOver: 0
   cameraAnim: {fileID: 961739755}
   TVAnim: {fileID: 1662259061}
+  punchUI: {fileID: 748437092}
   staticSound: {fileID: 1733840925}
   currentChannel: {fileID: 0}
   Static: {fileID: 2100000, guid: 3b4df60bc5b159948848990c46fe0f45, type: 2}
@@ -1598,8 +1599,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.059160113
-      value: 0.53992033
+      time: 0.054994464
+      value: 0.43625212
       inSlope: 2.6608696
       outSlope: 2.6608696
       tangentMode: 0
