@@ -33,12 +33,15 @@ namespace team11
         public float winPressTimes = 3;
         public float clearTimes = 0;
 
+      
+
         void Start ()
         {
             currentAntennaAngle = GameObject.Find("Antenna").GetComponent<Antenna>().angle; //find the antenna's angle at the beginning of the game
             //Generate a random clear angle not within a specified range of the antenna
             //This is why we get the antenna at the beginning of the game as well
             randomStatic();
+
         }
 
         void Update ()
@@ -50,32 +53,10 @@ namespace team11
 
             
             //Only press the button when at the correct angle
-            if (button1.WasPressedThisFrame()) //IMPORTANT DISTINCTION
+           //if (button1.WasPressedThisFrame()) //IMPORTANT DISTINCTION
             //WasPressedThisFrame() does this only ONCE per frame, unlike IS pressed
-            {
-                //Animates the camera and the TV
-                cameraAnim.SetTrigger("SuccesfulHit"); 
-                TVAnim.SetTrigger("SuccesfulHit");
-
-                //Find the in-game antenna current angle & make sure the random clear angle is different from it
-                if (currentAntennaAngle < (randomClearAngle + 1.5f) && currentAntennaAngle > (randomClearAngle - 1.5f))
-                {
-                    //Increase clear time when a button is pressed successfully 
-                    clearTimes+=1;
-
-                    //When clear time equals to win press time, the player wins the game
-                    if (clearTimes == winPressTimes)
-                    {
-                        cameraAnim.SetTrigger("Win"); //play the win animation
-                        Static.color = new Color(1, 1, 1, 0); //Remove the static
-
-                        gameOver = true;
-                        ReportGameCompletedEarly();
-                        return; //prevents static from randomizing for one frame
-                    }
-                    randomStatic();
-                }
-            }
+           // {
+           // }
          
             //Calcualting current static opacity
             currentStaticDistance = Mathf.Abs(currentAntennaAngle - randomClearAngle); //Get the distance between the antenna and the random clear angle
@@ -86,6 +67,7 @@ namespace team11
             staticSound.volume = Mathf.Lerp(0, 0.6f, interpolation);
 
         }
+
 
         public void randomStatic() //Create a random clear angle everytime when function is called
         {
@@ -102,5 +84,35 @@ namespace team11
             Static.color = new Color(1, 1, 1, 1); //Set static to maximum
             gameOver = true; //sets gameOver to true
         }
+
+
+        //TV shaking function and cleartime increase
+        public void slapTV()
+        {
+            //Animates the camera and the TV
+            cameraAnim.SetTrigger("SuccesfulHit");
+            TVAnim.SetTrigger("SuccesfulHit");
+            
+
+            //Find the in-game antenna current angle & make sure the random clear angle is different from it
+            if (currentAntennaAngle < (randomClearAngle + 1.5f) && currentAntennaAngle > (randomClearAngle - 1.5f))
+            {
+                //Increase clear time when a button is pressed successfully 
+                clearTimes += 1;
+
+                //When clear time equals to win press time, the player wins the game
+                if (clearTimes == winPressTimes)
+                {
+                    cameraAnim.SetTrigger("Win"); //play the win animation
+                    Static.color = new Color(1, 1, 1, 0); //Remove the static
+
+                    gameOver = true;
+                    ReportGameCompletedEarly();
+                    return; //prevents static from randomizing for one frame
+                }
+                randomStatic();
+            }
+        }
+
     }
 }
