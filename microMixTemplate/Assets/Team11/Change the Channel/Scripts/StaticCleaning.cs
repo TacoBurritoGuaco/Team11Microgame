@@ -21,6 +21,8 @@ namespace team11
         public Animator cameraAnim; //The camera's animator
         public Animator TVAnim; //The TV's animator
 
+        public AudioSource staticSound; //the static sound
+
         public Material Static;
         public AnimationCurve fading; //The animation curve of fading static
         float interpolation; //the interpolation value of the static lerp
@@ -81,6 +83,7 @@ namespace team11
 
             interpolation = fading.Evaluate(currentStaticOpacity); //Set the interpolation value of the slope
             Static.color = new Color(1, 1, 1, Mathf.Lerp(0, 1, interpolation)); //Interpolate (I did it yay)
+            staticSound.volume = Mathf.Lerp(0, 0.6f, interpolation);
 
         }
 
