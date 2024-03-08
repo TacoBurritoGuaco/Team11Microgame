@@ -24,7 +24,8 @@ namespace team11
 
             if (button1.WasPressedThisFrame())
             {
-                handAnimator.Play("Hand Slap");
+
+                handAnimator.Play("Flash in");
                 Invoke("tvShaking", 0.5f);
             }
         }
