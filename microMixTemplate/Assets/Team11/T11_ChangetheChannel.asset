@@ -37,7 +37,7 @@ MonoBehaviour:
   postgameMessages:
   - No TV show for you.
   - Now back to our scheduled programming.
-  bannerImage: {fileID: 0}
+  bannerImage: {fileID: 21300000, guid: c6e5db07c42617e4eac0361d22079bd9, type: 3}
   developerCredits:
   - Fernando Salas Duran - Lead Programmer
   - Rye Lue Sue - 2D Asset Artist
