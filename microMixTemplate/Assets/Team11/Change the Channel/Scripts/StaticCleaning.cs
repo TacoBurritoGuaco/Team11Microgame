@@ -84,6 +84,8 @@ namespace team11
         {
             cameraAnim.SetTrigger("Lose"); //plays the lose animation
             Static.color = new Color(1, 1, 1, 1); //Set static to maximum
+            staticSound.volume = 0.6f;
+            currentChannel.volume = 0;
             gameOver = true; //sets gameOver to true
         }
 

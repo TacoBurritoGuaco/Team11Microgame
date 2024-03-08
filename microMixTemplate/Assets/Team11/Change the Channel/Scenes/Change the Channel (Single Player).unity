@@ -167,7 +167,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -4380797333759202143, guid: 98f5bfffaef9d8849a822284a81797dd, type: 2}
   m_audioClip: {fileID: 8300000, guid: e08a0847e114f4541a3571954fba3bd4, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -791,7 +791,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -3351563503700153473, guid: 98f5bfffaef9d8849a822284a81797dd, type: 2}
   m_audioClip: {fileID: 8300000, guid: f0739b8ff1da5674c846050743da8fb9, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -989,6 +989,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   getInputFrom: 0
   handAnimator: {fileID: 878704848}
+  slamSound: {fileID: 1678955380}
   cleaningReference: {fileID: 1252673086}
 --- !u!95 &878704848
 Animator:
@@ -1781,7 +1782,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 5662198921768802039, guid: 98f5bfffaef9d8849a822284a81797dd, type: 2}
   m_audioClip: {fileID: 8300000, guid: e23ca7c7964b3f644a82df4390c42cea, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2222,7 +2223,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -1329019018529175525, guid: 98f5bfffaef9d8849a822284a81797dd, type: 2}
   m_audioClip: {fileID: 8300000, guid: f76e9a4c40c84bd4bb70392c6c500cee, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 1
   Mute: 0
