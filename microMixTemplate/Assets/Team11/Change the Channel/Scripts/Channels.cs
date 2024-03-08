@@ -14,6 +14,7 @@ namespace team11
         public Animator TV; //the tv animator
         private MeshRenderer mRenderer; //the object's mesh renderer
         public List<Material> channels; //the channel materials that will switch around
+        public List<AudioSource> channelMusic; //a list of all the current audioMusic
 
         void Start()
         {
@@ -39,6 +40,8 @@ namespace team11
 
             lastChannel = currentChannel; //Updates the lastChannel to currentChannel
             TV.SetInteger("change", currentChannel);
+            GameObject.Find("StaticScreen").GetComponent<StaticCleaning>().currentChannel = channelMusic[currentChannel]; //change music to music correspondant to the clip
+            GameObject.Find("StaticScreen").GetComponent<StaticCleaning>().currentChannel.Play(); //begin playing the audio
 
             //Changes the channel texture
             mRenderer.material = channels[currentChannel];

@@ -12,6 +12,8 @@ namespace team11
         //Reference the hand animator
         public Animator handAnimator;
 
+        public AudioSource slamSound; //the sound the hand makes when it hits the TV
+
         // Refernce the static clean script
         public StaticCleaning cleaningReference;
 
@@ -24,7 +26,6 @@ namespace team11
 
             if (button1.WasPressedThisFrame())
             {
-
                 handAnimator.Play("Flash in");
                 Invoke("tvShaking", 0.5f);
             }
@@ -33,6 +34,7 @@ namespace team11
         //Reference the static clean script for tv shake and clear time add
         public void tvShaking()
         {
+            slamSound.Play();
             cleaningReference.slapTV();
         }
 

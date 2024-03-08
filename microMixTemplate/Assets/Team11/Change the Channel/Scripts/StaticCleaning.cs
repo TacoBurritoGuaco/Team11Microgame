@@ -22,6 +22,7 @@ namespace team11
         public Animator TVAnim; //The TV's animator
 
         public AudioSource staticSound; //the static sound
+        public AudioSource currentChannel; //the sound of the current channel
 
         public Material Static;
         public AnimationCurve fading; //The animation curve of fading static
@@ -65,6 +66,7 @@ namespace team11
             interpolation = fading.Evaluate(currentStaticOpacity); //Set the interpolation value of the slope
             Static.color = new Color(1, 1, 1, Mathf.Lerp(0, 1, interpolation)); //Interpolate (I did it yay)
             staticSound.volume = Mathf.Lerp(0, 0.6f, interpolation);
+            currentChannel.volume = Mathf.Lerp(0.6f, 0, interpolation);
 
         }
 
@@ -82,6 +84,8 @@ namespace team11
         {
             cameraAnim.SetTrigger("Lose"); //plays the lose animation
             Static.color = new Color(1, 1, 1, 1); //Set static to maximum
+            staticSound.volume = 0.6f;
+            currentChannel.volume = 0;
             gameOver = true; //sets gameOver to true
         }
 
@@ -97,6 +101,8 @@ namespace team11
             //Find the in-game antenna current angle & make sure the random clear angle is different from it
             if (currentAntennaAngle < (randomClearAngle + 1.5f) && currentAntennaAngle > (randomClearAngle - 1.5f))
             {
+
+                currentChannel.Stop();
                 //Increase clear time when a button is pressed successfully 
                 clearTimes += 1;
 
