@@ -15,6 +15,7 @@ namespace team11
         Rigidbody rb; //the antenna's rigidbody
         public Animator rArrow; //the right arrow animator
         public Animator lArrow; //the left arrow animator
+        public Animator punchUI; //The punch ui animator (my hands hurt)
 
         public float angle; //The current angle of the antenna
         public float speed; //The speed at which this angle will change
@@ -70,6 +71,7 @@ namespace team11
         {
             rArrow.SetTrigger("GameStart"); //starts the right arrow fade in
             lArrow.SetTrigger("GameStart"); //starts the left arrow fade in
+            punchUI.SetTrigger("GameStart"); //starts the UI punch animation
         }
     }
 }
