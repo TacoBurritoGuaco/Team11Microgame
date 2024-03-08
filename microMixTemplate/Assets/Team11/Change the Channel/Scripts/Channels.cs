@@ -8,6 +8,7 @@ namespace team11
     public class Channels : MicrogameEvents
     {
         public int currentChannel; //the current channel that should be playing
+        public int lastChannel; //The last channel that was selected
         public float lastClearTime;
 
         public Animator TV; //the tv animator
@@ -31,7 +32,12 @@ namespace team11
         public void changeChannel()
         {
             //Changes the channel texture animation
-            currentChannel = (int)Random.Range(0, 4);
+            while (currentChannel == lastChannel) //while the currentChannel is equal to the lastChannel
+            {
+                currentChannel = (int)Random.Range(0, 4);
+            }
+
+            lastChannel = currentChannel; //Updates the lastChannel to currentChannel
             TV.SetInteger("change", currentChannel);
 
             //Changes the channel texture
